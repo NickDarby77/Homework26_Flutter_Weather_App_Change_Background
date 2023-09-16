@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lesson36_weather_app/resources/resources.dart';
 
 class WeekDaysWidgetModel {
   final String day;
@@ -16,31 +17,31 @@ class WeekDaysWidgetModel {
 List<WeekDaysWidgetModel> days = [
   WeekDaysWidgetModel(
     day: 'Monday',
-    image: 'assets/images/cloud.png',
+    image: Images.cloud,
     celciusDay: 10,
     celciusNight: 10,
   ),
   WeekDaysWidgetModel(
     day: 'Tuesday',
-    image: 'assets/images/sun.png',
+    image: Images.sun,
     celciusDay: 10,
     celciusNight: 10,
   ),
   WeekDaysWidgetModel(
     day: 'Wednesday',
-    image: 'assets/images/sun.png',
+    image: Images.sun,
     celciusDay: 10,
     celciusNight: 10,
   ),
   WeekDaysWidgetModel(
     day: 'Thursday',
-    image: 'assets/images/rain.png',
+    image: Images.rain,
     celciusDay: 10,
     celciusNight: 10,
   ),
   WeekDaysWidgetModel(
     day: 'Friday',
-    image: 'assets/images/snowflake.png',
+    image: Images.snowflake,
     celciusDay: 10,
     celciusNight: 10,
   ),

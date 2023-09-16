@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lesson36_weather_app/resources/resources.dart';
 import '../widgets/week_days_widget.dart';
 
 class NightScreen extends StatelessWidget {
@@ -39,7 +40,7 @@ class NightScreen extends StatelessWidget {
                       IconButton(
                         onPressed: () {},
                         icon: Image.asset(
-                          'assets/images/Ellipse2.png',
+                          Images.ellipse2,
                         ),
                       ),
                       const SizedBox(width: 25),
@@ -66,7 +67,7 @@ class NightScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 18),
                   Image.asset(
-                    'assets/images/moon.png',
+                    Images.moon,
                     width: 110,
                     height: 110,
                   ),

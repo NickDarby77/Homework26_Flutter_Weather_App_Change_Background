@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lesson36_weather_app/providers/theme_provider.dart';
+import 'package:lesson36_weather_app/resources/resources.dart';
 import 'package:lesson36_weather_app/screens/night_screen.dart';
 import 'package:lesson36_weather_app/widgets/week_days_widget.dart';
 import 'package:provider/provider.dart';
@@ -47,8 +48,8 @@ class DayScreen extends StatelessWidget {
                         },
                         icon: Image.asset(
                           vm.isDarkTheme
-                              ? 'assets/images/Ellipse1.png'
-                              : 'assets/images/Ellipse2.png',
+                              ? Images.ellipse1
+                              : Images.ellipse2,
                         ),
                       ),
                       const SizedBox(width: 25),
@@ -75,7 +76,7 @@ class DayScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 18),
                   Image.asset(
-                    'assets/images/sun.png',
+                    Images.sun,
                     width: 110,
                     height: 110,
                   ),
