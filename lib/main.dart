@@ -12,24 +12,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          create: (context) => ThemeProvider(),
-        ),
-      ],
-      child: Builder(
-        builder: (context) {
-          return TextFieldUnfocus(
-            child: MaterialApp(
-              theme: ThemeData(
-                scaffoldBackgroundColor: context.watch<ThemeProvider>().bgColor,
-              ),
-              debugShowCheckedModeBanner: false,
-              home: const DayScreen(),
+    return TextFieldUnfocus(
+      child: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(
+            create: (context) => ThemeProvider(),
+          ),
+        ],
+        child: Builder(builder: (context) {
+          return MaterialApp(
+            theme: ThemeData(
+              scaffoldBackgroundColor: context.watch<ThemeProvider>().bgColor,
             ),
+            debugShowCheckedModeBanner: false,
+            home: const DayScreen(),
           );
-        }
+        }),
       ),
     );
   }
@@ -52,3 +50,5 @@ class TextFieldUnfocus extends StatelessWidget {
         child: child,
       );
 }
+
+// 09/24/2023 changed at 18:46 PM

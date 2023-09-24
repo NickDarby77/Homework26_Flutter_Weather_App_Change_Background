@@ -44,12 +44,10 @@ class DayScreen extends StatelessWidget {
                     children: [
                       IconButton(
                         onPressed: () {
-                          vm.changeTeam();
+                          vm.changeTheme();
                         },
                         icon: Image.asset(
-                          vm.isDarkTheme
-                              ? Images.ellipse1
-                              : Images.ellipse2,
+                          vm.isDarkTheme ? Images.ellipse1 : Images.ellipse2,
                         ),
                       ),
                       const SizedBox(width: 25),

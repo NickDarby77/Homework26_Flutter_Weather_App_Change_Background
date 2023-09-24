@@ -5,7 +5,7 @@ class ThemeProvider extends ChangeNotifier {
 
   Color bgColor = Colors.grey;
 
-  void changeTeam() {
+  void changeTheme() {
     isDarkTheme = !isDarkTheme;
     bgColor = isDarkTheme ? Colors.black : Colors.grey;
     notifyListeners();

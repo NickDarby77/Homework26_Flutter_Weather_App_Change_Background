@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lesson36_weather_app/providers/theme_provider.dart';
 import 'package:lesson36_weather_app/resources/resources.dart';
+import 'package:provider/provider.dart';
 import '../widgets/week_days_widget.dart';
 
 class NightScreen extends StatelessWidget {
@@ -9,6 +11,8 @@ class NightScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final vm = context.watch<ThemeProvider>();
+
     List<Color> bgNightColor = [
       const Color(0xff223076),
       const Color(0xff06050E),
@@ -38,9 +42,11 @@ class NightScreen extends StatelessWidget {
                   Row(
                     children: [
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          vm.changeTheme();
+                        },
                         icon: Image.asset(
-                          Images.ellipse2,
+                          vm.isDarkTheme ? Images.ellipse2 : Images.ellipse1,
                         ),
                       ),
                       const SizedBox(width: 25),
